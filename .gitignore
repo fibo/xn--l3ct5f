@@ -1,0 +1,8 @@
+# Node.js dependencies.
+node_modules
+
+# Webapp build output.
+dist
+
+# Use direnv to load environment variables.
+.envrc

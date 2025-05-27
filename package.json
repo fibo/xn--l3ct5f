@@ -1,0 +1,28 @@
+{
+  "name": "speak-thai",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "check_types:app": "tsc -p ./tsconfig.app.json",
+    "deploy": "npm run build && npm run s3_sync",
+    "s3_sync": "aws s3 sync dist s3://xn-l3ct5f.inversive.net",
+    "start": "vite",
+    "build": "tsc -b && vite build"
+  },
+  "dependencies": {
+    "bulma": "^1.0.4",
+    "preact": "^10.26.5",
+    "trunx": "^1.1.2"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.1",
+    "pre-commit": "^1.2.2",
+    "sass-embedded": "^1.89.0",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  },
+  "pre-commit": [
+    "check_types:app"
+  ]
+}

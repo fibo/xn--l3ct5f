@@ -1,0 +1,20 @@
+// Bulma base styles.
+@use "bulma/sass/base";
+@use "bulma/sass/themes";
+
+// Bulma components.
+@use "bulma/sass/elements/button";
+
+// Bulma variables.
+:root {
+  --bulma-primary-h: 185deg;
+  --bulma-primary-l: 45%;
+  --bulma-link-h: 292deg;
+  --bulma-link-s: 82%;
+  --bulma-info-h: 205deg;
+  --bulma-success-h: 147deg;
+  --bulma-warning-h: 50deg;
+  --bulma-warning-l: 58%;
+  --bulma-danger-h: 17deg;
+  --bulma-danger-l: 73%;
+}

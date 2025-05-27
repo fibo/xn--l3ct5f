@@ -1,0 +1,7 @@
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+Disallow: *
+
+Sitemap: https://xn--l3ct5f.inversive.net/sitemap.xml
