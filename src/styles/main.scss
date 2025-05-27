@@ -1,9 +1,12 @@
 // Bulma base styles.
-@use "bulma/sass/base";
-@use "bulma/sass/themes";
+@use 'bulma/sass/base';
+@use 'bulma/sass/themes';
 
 // Bulma components.
-@use "bulma/sass/elements/button";
+@use 'bulma/sass/elements/button';
+@use 'bulma/sass/elements/title';
+@use 'bulma/sass/components/navbar';
+@use 'bulma/sass/layout/hero';
 
 // Bulma variables.
 :root {

@@ -6,6 +6,7 @@
   "scripts": {
     "check_types:app": "tsc -p ./tsconfig.app.json",
     "deploy": "npm run build && npm run s3_sync",
+    "lint-staged": "lint-staged",
     "s3_sync": "aws s3 sync dist s3://xn-l3ct5f.inversive.net",
     "start": "vite",
     "build": "tsc -b && vite build"
@@ -17,12 +18,34 @@
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.1",
+    "lint-staged": "^16.0.0",
     "pre-commit": "^1.2.2",
+    "prettier": "^3.5.3",
     "sass-embedded": "^1.89.0",
     "typescript": "~5.8.3",
     "vite": "^6.3.5"
   },
+  "imports": {
+    "#/*": "./src/*"
+  },
+  "lint-staged": {
+    "**/*.json": [
+      "prettier --write"
+    ],
+    "src/**/*.{ts,tsx}": [
+      "prettier --write"
+    ],
+    "src/**/*.{scss,sass}": [
+      "prettier --write"
+    ]
+  },
   "pre-commit": [
-    "check_types:app"
-  ]
+    "check_types:app",
+    "lint-staged"
+  ],
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none"
+  }
 }
